@@ -2,11 +2,11 @@ import click
 import requests
 from time import sleep
 from selenium import webdriver
-from selenium.common import NoSuchElementException, TimeoutException, ElementClickInterceptedException
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, ElementClickInterceptedException
 
 
 def main():
@@ -131,12 +131,6 @@ def has_connection(url):
         return False
         exit(1)
 
-""""
-def check_response_code(url):
-    response = requests.get(url)
-    http_code = response.status_code
-    print(f"HTTP Response Code: {http_code}")
-"""
 def parse_song_and_artist_row(table_rows):
     """
     Extracts song and artist name from the table rows
