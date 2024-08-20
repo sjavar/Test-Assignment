@@ -33,7 +33,6 @@ def choose_browser_regime(mode):
         driver = webdriver.Chrome()
     else:
         print('invalid value, please try again')
-        print('to restart print search_yousician.py in command line')
         exit(1)
     return driver
 
