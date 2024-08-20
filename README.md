@@ -14,6 +14,12 @@ Create a command line program to check the search results for the page:
 Solution made with Python3 and Selenium. 
 Python3 and Chrome browser should be installed for run application
 
+Chromedriver needs to be in PATH:
+<code>brew install chromedriver --cask</code>
+
+To proceed with apple malicious software
+<code>xattr -d com.apple.quarantine $(which chromedriver)</code>
+
 Application can use browser in both normal and headless modes, mode can be choosed after app running
 
 To run the project open project directory in terminal and run
